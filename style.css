@@ -12,6 +12,7 @@ a {
     display: flex;
     justify-content: space-between;
 	width: 100%;
+	z-index: 1;
 }
 .header a{ 
 	font-size: 20px;
@@ -21,7 +22,7 @@ a {
 	text-align: center;
 	padding: 20px;
 	color:#f7f7f7;
-    border-bottom: #e6bc43;
+    border-bottom: #45adff;
 	transition-duration: 0.5s;
 	overflow: hidden;
 }
@@ -30,25 +31,67 @@ a.selec{
 	font-family: Verdana, sans-serif;
 	text-align: center;
 	padding: 20px;
-    background-color:#e6bc43;
+    background-color:#45adff;
 	float: justify;
 	color:#0f0f14;
 	transition-duration: 0.5s;
 	overflow: hidden;
 }
 .header a:hover{
-	background-color:#e6bc43;
+	background-color:#45adff;
     color: #0f0f14;
 }
 .logo{
-	background: linear-gradient(0deg, rgba(15,15,20,1) 0%, rgba(15,15,20,0) 15%, rgba(15,15,20,0) 50%, rgba(15,15,20,0) 85%, rgba(15,15,20,1) 100%);
-	background-image: url("imagens/bg2.jpg");
+	background: linear-gradient(0deg, rgba(15,15,20,1) 0%, rgba(15,15,20,0.2) 15%, rgba(15,15,20,0.2) 50%, rgba(15,15,20,0.2) 70%, rgba(15,15,20,1) 85%), url("imagens/bg2.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
-	
+	background-position: 0% 90%;
 }
-img.logotipo{
-	padding-top: 100px;
+.logo img{
 	width: 30%;
-	padding-bottom: 40px;
+	padding-bottom: 60px;
+}
+h1.inicio{
+	padding-top: 130px;
+	color: #f7f7f7;
+	font-family: Verdana, sans-serif;
+	font-size: 80px;
+	text-align: center;
+}
+.animacao {
+	-webkit-animation: animacao 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: animacao 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes animacao {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+            transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+            transform-origin: 50% 1400px;
+    opacity: 1;
+  }
+}
+@keyframes animacao {
+  0% {
+    -webkit-transform: translateY(-600px) rotateX(-30deg) scale(0);
+            transform: translateY(-600px) rotateX(-30deg) scale(0);
+    -webkit-transform-origin: 50% 100%;
+            transform-origin: 50% 100%;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0) rotateX(0) scale(1);
+            transform: translateY(0) rotateX(0) scale(1);
+    -webkit-transform-origin: 50% 1400px;
+            transform-origin: 50% 1400px;
+    opacity: 1;
+  }
 }
